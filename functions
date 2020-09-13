@@ -1,4 +1,3 @@
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # 1) Complete the function to return the result of the conversion
 def convert_distance(miles):
     km = miles * 1.6   # approximately 1.6 km in 1 mile
@@ -14,8 +13,7 @@ print("The distance in kilometers is " + str(km))
 # 4) Calculate the round-trip in kilometers by doubling the result,
 #    and fill in the blank to print the result
 print("The round-trip in kilometers is " + str(km*2))
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # This function compares two numbers and returns them
 # in increasing order.
 def order_numbers(number1, number2):
@@ -28,87 +26,12 @@ def order_numbers(number1, number2):
 #    of the function call
 smaller, bigger = order_numbers(100, 99)
 print(smaller, bigger)
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-def calculate_storage(filesize):
-    block_size = 4096
-    # Use floor division to calculate how many blocks are fully occupied
-    full_blocks = filesize//block_size
-    # Use the modulo operator to check whether there's any remainder
-    partial_block_remainder = filesize%block_size
-    # Depending on whether there's a remainder or not, return
-    # the total number of bytes required to allocate enough blocks
-    # to store your data.
-    if partial_block_remainder > 0:
-        return 4096*(full_blocks+1)
-    return full_blocks*4096
-
-print(calculate_storage(1))    # Should be 4096
-print(calculate_storage(4096)) # Should be 4096
-print(calculate_storage(4097)) # Should be 8192
-print(calculate_storage(6000)) # Should be 8192
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-def exam_grade(score):
-	if score>95:
-		grade = "Top Score"
-	elif score>=60:
-		grade = "Pass"
-	else:
-		grade = "Fail"
-	return grade
-
-print(exam_grade(65)) # Should be Pass
-print(exam_grade(55)) # Should be Fail
-print(exam_grade(60)) # Should be Pass
-print(exam_grade(95)) # Should be Pass
-print(exam_grade(100)) # Should be Top Score
-print(exam_grade(0)) # Should be Fail
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-def format_name(first_name, last_name):
-    if first_name!='' and last_name!='':
-       return ("Name: " +last_name+", "+first_name)
-    elif first_name!='' or last_name!='':
-       return ("Name: " +last_name+first_name)
-    else:
-       return ''
-
-print(format_name("Ernest", "Hemingway"))
-# Should return the string "Name: Hemingway, Ernest"
-print(format_name("", "Madonna"))
-# Should return the string "Name: Madonna"
-print(format_name("Voltaire", ""))
-# Should return the string "Name: Voltaire"
-print(format_name("", ""))
-# Should return an empty string
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-def longest_word(word1, word2, word3):
-	if len(word1) >= len(word2) and len(word1) >= len(word3):
-		word = word1
-	elif len(word2)>=len(word1) and len(word2) >= len(word3):
-		word = word2
-	else:
-		word = word3
-	return(word)
-
-print(longest_word("chair", "couch", "table"))
-print(longest_word("bed", "bath", "beyond"))
-print(longest_word("laptop", "notebook", "desktop"))
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-import math
-def fractional_part(numerator, denominator):
-	if denominator == 0:
-	# Operate with numerator and denominator to 
-# keep just the fractional part of the quotient
-	   return 0
-	return numerator/denominator - math.floor(numerator/denominator)
-
-print(fractional_part(5, 5)) # Should be 0
-print(fractional_part(5, 4)) # Should be 0.25
-print(fractional_part(5, 3)) # Should be 0.66...
-print(fractional_part(5, 2)) # Should be 0.5
-print(fractional_part(5, 0)) # Should be 0
-print(fractional_part(0, 5)) # Should be 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+def lucky_number(name):
+  number = len(name) * 9
+  output = "Hello " + name + ". Your lucky number is " + str(number)
+  return(output)
+	    
+print(lucky_number("Kay"))
+print(lucky_number("Cameron"))
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
